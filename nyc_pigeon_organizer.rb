@@ -39,9 +39,11 @@ def nyc_pigeon_organizer(data)
     data.each do |attribute, color_hash|
       hash_of_pigeons[name][attribute] = []
     color_hash.each do |qualities, more_names|
-      hash_of_pigeons[name][attribute] << qualities.to_s if more_names.include?(name)
+      if more_names.include?(name)
+      hash_of_pigeons[name][attribute] << qualities.to_s 
         end
       end
+    end
     end
     hash_of_pigeons
   end
