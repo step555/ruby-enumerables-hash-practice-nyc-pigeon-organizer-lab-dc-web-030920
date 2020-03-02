@@ -7,7 +7,7 @@ def nyc_pigeon_organizer(data)
   
   hashing_names = pigeon_names.map do |name| 
     hash_of_pigeons[name] = {}
-    data.map do |attribute, attribute_type| #value creates empty array after innerkey
+    data.map do |attribute, attribute_type| #value creates empty array after attribute
       hash_of_pigeons[name][attribute] = []
         attribute_type.map do |current_attribute, names_array|
       # If current pigeon's name exists inside of the color hash, add the color to pigeons color
