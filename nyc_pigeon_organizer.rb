@@ -2,7 +2,6 @@ require 'pry'
 
 def nyc_pigeon_organizer(data)
   raw_pigeon_colors = data.values #=>returns all colors
-  binding.pry
   pigeon_names = raw_pigeon_colors.map{|names| names.values}.flatten.uniq
   hash_of_pigeons = {}
   
